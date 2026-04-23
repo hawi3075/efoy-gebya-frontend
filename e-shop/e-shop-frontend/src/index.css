@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+/* Import a professional, high-end font for the premium look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    
+    /* Luxury console accents */
+    --primary-red: 0 100% 50%; /* Pure Red for branding */
+    --card-bg: 0 0% 100%;
+    --input-bg: 210 40% 96.1%; /* Subtle blue-gray for inputs seen in your local host */
+  }
+
+  body {
+    @apply antialiased text-black;
+    font-family: 'Inter', sans-serif;
+    background-color: #F9F9F9; /* Matching the background in your Figma */
+  }
+
+  /* Force headers to use the 'Black' weight you prefer */
+  h1, h2, h3 {
+    @apply font-[900] tracking-tighter;
+  }
+}
+
+@layer components {
+  /* Custom utility for that specific input color in your screenshot */
+  .input-field {
+    @apply bg-[#E8F0FE] border-none rounded-lg focus:ring-2 focus:ring-zinc-200 transition-all duration-200;
+  }
+}
